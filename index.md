@@ -13,7 +13,7 @@
 
 ---
 [Exploring Gerrymandering and Efficiency Gap](https://github.com/Bandytwin/Exploring_the_World/blob/main/us-house-elections/README.md)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/national_eg.webp?raw=true"/>
 
 ---
 
