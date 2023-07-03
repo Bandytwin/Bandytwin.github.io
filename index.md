@@ -9,7 +9,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[**Microbusiness Density Forecasting**](/pdf/sample_presentation.pdf)
+[Microbusiness Density Forecasting](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
