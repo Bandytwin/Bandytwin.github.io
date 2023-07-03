@@ -27,6 +27,7 @@
 
 ## Journal Publications
 [Robust Entropy Requires Strong and Balanced Excitatory and Inhibitory Synapses](https://doi.org/10.1063/1.5043429)
+Chaos 28, 103115 (2018)
 
 ---
 
