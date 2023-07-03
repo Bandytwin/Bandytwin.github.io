@@ -1,15 +1,19 @@
-## Portfolio
+## Data Science + ML Projects
 
 ---
 
-### Category Name 1 
+### Machine Learning
 
+---
 [Project 1 Title](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
+### Data Science
 
 ---
 [Exploring Gerrymandering and Efficiency Gap](https://github.com/Bandytwin/Exploring_the_World/blob/main/us-house-elections/README.md)
@@ -21,15 +25,6 @@
 <img src="images/vote_vs_seat_margin.webp?raw=true"/>
 ---
 
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
-
----
 
 
 
