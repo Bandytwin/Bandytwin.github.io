@@ -3,9 +3,9 @@
 
 **Project description:** The goal of this competition is to forecast monthly microbusiness density over the next 6 months for county in the U.S. This work will help policymakers gain visibility into microbusinesses, a growing trend of very small entities. Additional information will enable new policies and programs to improve the success and impact of these smallest of businesses.
 
-My final forecasting solution scored in the top 4% in terms of accuarcy from over 3,500 teams.
+My final forecasting [solution](https://www.kaggle.com/code/abandura/mbd-forecasting-w-mars-lms-r) scored in the top 4% in terms of accuarcy from over 3,500 teams.
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+### 1. Data Overview and Evaluation Metric
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
@@ -15,7 +15,7 @@ if (isAwesome){
 }
 ```
 
-### 2. Assess assumptions on which statistical inference will be based
+### 2. Outlier Detection
 
 ```javascript
 if (isAwesome){
@@ -23,13 +23,11 @@ if (isAwesome){
 }
 ```
 
-### 3. Support the selection of appropriate statistical tools and techniques
+### 3. Linear Model Minimizing SMAPE
 
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
-### 4. Provide a basis for further data collection through surveys or experiments
+### 4. Results
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
