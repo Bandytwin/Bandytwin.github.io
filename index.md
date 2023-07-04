@@ -10,7 +10,7 @@
 
 ---
 [Microbusiness Density Forecasting](/md_forecasting)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/mb_sample_fc.png?raw=true"/>
 
 ---
 ### Data Science
