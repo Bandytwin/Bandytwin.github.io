@@ -13,6 +13,7 @@
 - Time-series modeling and forecasting
 - Outlier detection
 - Linear Modeling
+
 <img src="images/mb_sample_fc.png?raw=true"/>
 
 ---
