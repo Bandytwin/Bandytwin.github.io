@@ -3,7 +3,7 @@
 ## GoDaddy - Microbusiness Density Forecasting 
 [Kaggle Competition](https://www.kaggle.com/competitions/godaddy-microbusiness-density-forecasting)
 
-**Project description:** The goal of this competition is to forecast monthly microbusiness density (MD) over the next 6 months for county in the U.S. This work will help policymakers gain visibility into microbusinesses, a growing trend of very small entities. Additional information will enable new policies and programs to improve the success and impact of these smallest of businesses.
+**Project description:** The goal of this competition is to forecast monthly microbusiness density (MD) over the next 6 months for every county in the U.S. This work will help policymakers gain visibility into microbusinesses, a growing trend of very small entities. Additional information will enable new policies and programs to improve the success and impact of these smallest of businesses.
 
 I used R for this competition, and my final forecasting [solution](https://www.kaggle.com/code/abandura/mbd-forecasting-w-mars-lms-r) scored in the top 4% in terms of accuarcy from over 3,500 teams.
 
@@ -25,7 +25,7 @@ The data contains two classes of counties that are difficult to model and foreca
 
 <img src="images/levelshift_ex.png?raw=true"/>
 
-The source of these discontinuities is nebulous, but if they are included in modeling they degrade overall performance. An effective way to ID them is with a month-over-month absolute change in MD over 25%, and has the added benefit of also catching the counties with the smallest MD values. Due to time constraints, I chose to exclude the difficult-to-model counties from the main modeling process, and simply use persistence forecasts for them. That said, I think creating a process to remove discontinunities has a lot of potential to improve performance.
+The source of these discontinuities is nebulous, but if they are included in modeling they degrade overall performance. An effective way to ID them is by selecting counties with a month-over-month absolute change in MD greater than 25%. This method has the added benefit of also catching the counties with the smallest MD values. Due to time constraints, I chose to exclude the difficult-to-model counties from the main modeling process, and simply use persistence forecasts for them. That said, I think creating a process to remove discontinunities has a lot of potential to improve performance.
 
 <img src="images/cfips_dist.png?raw=true"/>
 
