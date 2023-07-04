@@ -1,7 +1,9 @@
 ## GoDaddy - Microbusiness Density Forecasting 
 [Kaggle Competition](https://www.kaggle.com/competitions/godaddy-microbusiness-density-forecasting)
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Project description:** The goal of this competition is to forecast monthly microbusiness density over the next 6 months for county in the U.S. This work will help policymakers gain visibility into microbusinesses, a growing trend of very small entities. Additional information will enable new policies and programs to improve the success and impact of these smallest of businesses.
+
+My final forecasting solution scored in the top 4% in terms of accuarcy from over 3,500 teams.
 
 ### 1. Suggest hypotheses about the causes of observed phenomena
 
