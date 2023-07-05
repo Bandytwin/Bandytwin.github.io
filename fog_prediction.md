@@ -24,7 +24,7 @@ The data contains two classes of counties that are difficult to model and foreca
 - Counties with very few microbusinesses and therefor low, noisy MD.
 - Counties with discontinuities (see the plot below for some examples).
 
-<img src="images/levelshift_ex.png?raw=true"/>
+
 
 The source of these discontinuities is nebulous, but if they are included in modeling they degrade overall performance. An effective way to ID them is by selecting counties with a month-over-month absolute change in MD greater than 25%. This method has the added benefit of also catching the counties with the smallest MD values. Due to time constraints, I chose to exclude the difficult-to-model counties from the main modeling process, and simply use persistence forecasts for them. That said, I think creating a process to remove discontinunities has a lot of potential to improve performance.
 
@@ -34,22 +34,7 @@ The source of these discontinuities is nebulous, but if they are included in mod
 
 I test a number of different modeling approaches, including traditional forecasting methods (ARIMA, ETS, TBATS, etc.) as well as tree-based methods (XGboost, lightGBM), however the most accurate model endeded being an autoregressive linear model trained to minimize SMAPE. The features I used were lagged difference and moving average terms, along with an ETS forecast of future MD, and solved the model weights by minimizing the following objective function:
 
-```R
-# objective function for linear model optimization
-fn = function(par, df, r_cols, y, norm_col=F, l2=0, l1=0) {
-  preds = rep(par[1], df[,.N])
-  l2p = 0
-  l1p = 0
-  for (ind in 2:length(par)) {
-    i_col = r_cols[ind-1]
-    preds = preds + par[ind]*df[, (get(i_col)-mean(get(i_col)))/sd(get(i_col))]
-    l2p = l2p + l2*(par[ind])^2
-    l1p = l1p + l1*abs(par[ind])
-  }
-  err = smape(a=df[,get(y)], fc=preds) + l1p + l2p
-  return(err)
-}
-```
+<img src="images/fog_cnn_arch.jpeg?raw=true"/>
 
 ### 4. Results
 
