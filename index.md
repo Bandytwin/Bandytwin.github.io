@@ -5,7 +5,7 @@
 ### Machine Learning Competitions
 
 ---
-[Parkinson's Freezing of Gait Prediction](/sample_page)
+[Parkinson's Freezing of Gait Prediction](/fog_prediction.md)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
