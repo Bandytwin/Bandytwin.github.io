@@ -10,25 +10,15 @@ I used PyTorch for this competition, and my final prediction model [solution](ht
 
 ### 1. Data Overview and Evaluation Metric
 
-The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols. These sessions were video recorderd as well, and experts review to footage so they could label timestamps where FOG occured. An example of this labeled acceleromtered data is shown below, with the dark grey band representing the presence of FOG.
+The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols. These sessions were video recorderd as well, and experts review to footage so they could label timestamps where FOG occured. An example of this labeled acceleromtered data is shown below, with the dark grey band representing the presence of a FOG event.
 
 <img src="images/fog_sample.png?raw=true"/>
 
-The evaluation metric used for this competition is symmetric mean absolute percent error ([SMAPE](https://en.wikipedia.org/wiki/Symmetric_mean_absolute_percentage_error)). SMAPE is based on relative errors, which means that counties with smaller MB densities are over-emphasized. Indeed the baseline persistence forecast method scored quite well, and was especially difficult to beat for shorter forecasting horizons. Success in this competition required either ransforming MD to a relative value (i.e. with a rolling division) to use as a target for model training, or to choose a methodology that more directly minimizes percent errors.
-
-<img src="images/smape_formula.png?raw=true"/>
+Because three distinct types of FOG events exist in the dataset ("start hesitation", "turn", and "walking"), model performance was measured with the mean [absolute precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html) across the three classes. This encourages balanced classification performance for each class, and requires a modeling approach that can handle imbalanced classes since one of the FOG types was much more common in the dataset than the other two.
 
 ### 2. Data Pipeline Overview
 
-The data contains two classes of counties that are difficult to model and forecast efficiently: 
-- Counties with very few microbusinesses and therefor low, noisy MD.
-- Counties with discontinuities (see the plot below for some examples).
 
-
-
-The source of these discontinuities is nebulous, but if they are included in modeling they degrade overall performance. An effective way to ID them is by selecting counties with a month-over-month absolute change in MD greater than 25%. This method has the added benefit of also catching the counties with the smallest MD values. Due to time constraints, I chose to exclude the difficult-to-model counties from the main modeling process, and simply use persistence forecasts for them. That said, I think creating a process to remove discontinunities has a lot of potential to improve performance.
-
-<img src="images/cfips_dist.png?raw=true"/>
 
 ### 3. CNN Model Architecture
 
