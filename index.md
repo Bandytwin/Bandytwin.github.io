@@ -6,6 +6,9 @@
 
 ---
 [Parkinson's Freezing of Gait Prediction](/fog_prediction.md)
+- Wearable Sensor Data
+- CNN Modeling
+
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
