@@ -1,15 +1,16 @@
 [back](https://bandytwin.github.io/)
 
-## GoDaddy - Microbusiness Density Forecasting 
-[Kaggle Competition](https://www.kaggle.com/competitions/godaddy-microbusiness-density-forecasting)
+## Parkinson's Freezing of Gait (FOG) Prediction
+[Kaggle Competition](https://www.kaggle.com/competitions/tlvmc-parkinsons-freezing-gait-prediction)
 
-**Project description:** The goal of this competition is to forecast monthly microbusiness density (MD) over the next 6 months for every county in the U.S. This work will help policymakers gain visibility into microbusinesses, a growing trend of very small entities. Additional information will enable new policies and programs to improve the success and impact of these smallest of businesses.
+**Project description:** "The goal of this competition is to detect freezing of gait (FOG), a debilitating symptom that afflicts many people with Parkinson’s disease. You will develop a machine learning model trained on data collected from a wearable 3D lower back sensor.
+Your work will help researchers better understand when and why FOG episodes occur. This will improve the ability of medical professionals to optimally evaluate, monitor, and ultimately, prevent FOG events."
 
-I used R for this competition, and my final forecasting [solution](https://www.kaggle.com/code/abandura/mbd-forecasting-w-mars-lms-r) scored in the top 4% in terms of accuarcy from over 3,500 teams.
+I used PyTorch for this competition, and my final prediction model [solution](https://www.kaggle.com/code/abandura/fog-1d-cnn) scored in the top 4% in terms of accuarcy from over 1,300 teams.
 
 ### 1. Data Overview and Evaluation Metric
 
-Looking at average MD for all counties, the strongest observable feature present is linear growth over time. Additionaly, there does not appear to be much seasonality present other than a slight dip in winter, though with only a few years of data it's difficult to know for certain.
+The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols
 
 <img src="images/mb_avg.png?raw=true"/>
 
@@ -17,7 +18,7 @@ The evaluation metric used for this competition is symmetric mean absolute perce
 
 <img src="images/smape_formula.png?raw=true"/>
 
-### 2. Outlier Detection
+### 2. Data Pipeline Overview
 
 The data contains two classes of counties that are difficult to model and forecast efficiently: 
 - Counties with very few microbusinesses and therefor low, noisy MD.
@@ -29,7 +30,7 @@ The source of these discontinuities is nebulous, but if they are included in mod
 
 <img src="images/cfips_dist.png?raw=true"/>
 
-### 3. Linear Model Minimizing SMAPE
+### 3. CNN Model Architecture
 
 I test a number of different modeling approaches, including traditional forecasting methods (ARIMA, ETS, TBATS, etc.) as well as tree-based methods (XGboost, lightGBM), however the most accurate model endeded being an autoregressive linear model trained to minimize SMAPE. The features I used were lagged difference and moving average terms, along with an ETS forecast of future MD, and solved the model weights by minimizing the following objective function:
 
