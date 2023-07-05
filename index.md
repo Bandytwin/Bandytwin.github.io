@@ -2,7 +2,7 @@
 
 ---
 
-### Machine Learning
+### Machine Learning Competitions
 
 ---
 [Parkinson's Freezing of Gait Prediction](/sample_page)
