@@ -10,9 +10,9 @@ I used PyTorch for this competition, and my final prediction model [solution](ht
 
 ### 1. Data Overview and Evaluation Metric
 
-The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols
+The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols. These sessions were video recorderd as well, and experts review to footage so they could label timestamps where FOG occured. An example of this labeled acceleromtered data is shown below, with the dark grey band representing the presence of FOG.
 
-<img src="images/mb_avg.png?raw=true"/>
+<img src="images/fog_sample.png?raw=true"/>
 
 The evaluation metric used for this competition is symmetric mean absolute percent error ([SMAPE](https://en.wikipedia.org/wiki/Symmetric_mean_absolute_percentage_error)). SMAPE is based on relative errors, which means that counties with smaller MB densities are over-emphasized. Indeed the baseline persistence forecast method scored quite well, and was especially difficult to beat for shorter forecasting horizons. Success in this competition required either ransforming MD to a relative value (i.e. with a rolling division) to use as a target for model training, or to choose a methodology that more directly minimizes percent errors.
 
