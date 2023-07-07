@@ -1,6 +1,3 @@
-## ML + Data Science Projects
-
----
 
 ### Machine Learning Competitions
 
@@ -19,7 +16,6 @@
 
 <img src="images/mb_sample_fc.png?raw=true"/>
 
----
 ### Data Science
 
 ---
@@ -30,9 +26,10 @@
 
 <img src="images/national_eg.webp?raw=true"/>
 <img src="images/vote_vs_seat_margin.webp?raw=true"/>
----
 
 ## Journal Publications
+
+---
 [Robust Entropy Requires Strong and Balanced Excitatory and Inhibitory Synapses](https://doi.org/10.1063/1.5043429)
 
 Chaos 28, 103115 (2018)
