@@ -28,6 +28,6 @@ I used 6-fold CV to perform hyperparameter tuning, which led to the final model 
 
 ### 4. Example Class predictions
 
-<img src="images/mb_sample_fc.png?raw=true"/>
+<img src="images/fog_preds.png?raw=true"/>
 
 
