@@ -9,7 +9,7 @@
 - Wearable Sensor Data
 - CNN Modeling
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/fog_preds.png?raw=true"/>
 
 ---
 [Microbusiness Density Forecasting](/md_forecasting)
