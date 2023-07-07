@@ -10,7 +10,7 @@ I used PyTorch for this competition, and my final prediction model [solution](ht
 
 ### 1. Data Overview and Evaluation Metric
 
-The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols. These sessions were video recorderd as well, and experts review to footage so they could label timestamps where FOG occured. An example of this labeled acceleromtered data is shown below, with the dark grey band representing the presence of a FOG event.
+The data provided is the raw output from 3D accelerometers worn by patients on their lower backs as they completed FOG inducing protocols. These sessions were video recorderd as well, and experts reviewed the footage to label timestamps where FOG events occured. An example of this labeled acceleromtered data is shown below, with the dark grey band representing the presence of a FOG event.
 
 <img src="images/fog_sample.png?raw=true"/>
 
@@ -22,7 +22,7 @@ I approached this problem as a segment, 4-class classification problem (3 FOG ty
 
 ### 3. CNN Model Architecture
 
-I used 6-fold CV to perform hyperparameter tuning, which led to the final model architecture summarize in the figure below, and also includes batch normalization layers between every convolutional layer. The final mAP was 0.30.
+I used 6-fold CV to perform hyperparameter tuning, which led to the final model architecture summarize in the figure below, and also includes batch normalization layers between every convolutional layer. I used Focal Loss for training which helped handle the imbalanced dataset and significantly improved model accuracy. The final mAP was 0.30.
 
 <img src="images/fog_cnn_arch.jpeg?raw=true"/>
 
