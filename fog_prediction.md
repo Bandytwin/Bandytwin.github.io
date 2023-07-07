@@ -14,19 +14,19 @@ The data provided is the raw output from 3D accelerometers worn by patients on t
 
 <img src="images/fog_sample.png?raw=true"/>
 
-Because three distinct types of FOG events exist in the dataset ("start hesitation", "turn", and "walking"), model performance was measured with the mean [absolute precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html) across the three classes. This encourages balanced classification performance for each class, and requires a modeling approach that can handle imbalanced classes since one of the FOG types was much more common in the dataset than the other two.
+Because three distinct types of FOG events exist in the dataset ("start hesitation", "turn", and "walking"), model performance was measured with the mean [absolute precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html) (mAP) across the three classes. This encourages balanced classification performance for each class, and requires a modeling approach that can handle imbalanced classes since one of the FOG types was much more common in the dataset than the other two.
 
 ### 2. Data Pipeline Overview
 
-
+I approached this problem as a segment, 4-class classification problem (3 FOG types, and the absence of FOG as a fourth class), which means feeding the CNN a segment of 1-2 seconds of data and classifying a timestep near the center of the segment. The dataloader performed feature engineering on each patient data file when initially loading it, and then windowed the data for each batch during training in order to accomodate the limited RAM resources. I tested a lot of different spectral and temporal features generated from the raw accelerometer data, but wasn't able to improve performance of the accelerometer data on its own.
 
 ### 3. CNN Model Architecture
 
-I test a number of different modeling approaches, including traditional forecasting methods (ARIMA, ETS, TBATS, etc.) as well as tree-based methods (XGboost, lightGBM), however the most accurate model endeded being an autoregressive linear model trained to minimize SMAPE. The features I used were lagged difference and moving average terms, along with an ETS forecast of future MD, and solved the model weights by minimizing the following objective function:
+I used 6-fold CV to perform hyperparameter tuning, which led to the final model architecture summarize in the figure below, and also includes batch normalization layers between every convolutional layer. The final mAP was 0.30.
 
 <img src="images/fog_cnn_arch.jpeg?raw=true"/>
 
-### 4. Results
+### 4. Example Class predictions
 
 <img src="images/mb_sample_fc.png?raw=true"/>
 
