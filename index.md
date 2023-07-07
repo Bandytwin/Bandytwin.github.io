@@ -23,7 +23,7 @@
 ### Data Science
 
 ---
-[Exploring Gerrymandering and Efficiency Gap](https://github.com/Bandytwin/Exploring_the_World/blob/main/us-house-elections/README.md)
+[Exploring Gerrymandering and Efficiency Gap](/us_house.md)
 - Understand and visualize US House of Reps election return data
 - Deep dive into properties of Efficiency Gap (EG) metric
 - Explore EG variations between states and over time
