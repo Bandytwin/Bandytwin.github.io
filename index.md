@@ -1,5 +1,5 @@
 
-## Machine Learning Competitions + Personal Projects
+## ML Competitions + Personal Projects
 
 [Parkinson's Freezing of Gait Prediction](/fog_prediction.md)
 - Wearable Sensor Data
