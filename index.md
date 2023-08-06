@@ -7,7 +7,6 @@
 
 <img src="images/fog_preds.png?raw=true"/>
 
----
 [Microbusiness Density Forecasting](/md_forecasting)
 - Time-series modeling and forecasting
 - Outlier detection
