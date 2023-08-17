@@ -1,20 +1,20 @@
 
 ## ML Competitions + Personal Projects
 
-[Parkinson's Freezing of Gait Prediction](/fog_prediction.md)
+[Parkinson's Freezing of Gait Prediction (2023)](/fog_prediction.md)
 - Wearable Sensor Data
 - Convolutional Neural Networks
 
 <img src="images/fog_preds.png?raw=true"/>
 
-[Microbusiness Density Forecasting](/md_forecasting)
+[Microbusiness Density Forecasting (2023)](/md_forecasting)
 - Time-series modeling and forecasting
 - Outlier detection
 - Linear Modeling
 
 <img src="images/mb_sample_fc.png?raw=true"/>
 
-[Exploring Gerrymandering and Efficiency Gap](/us_house.md)
+[Exploring Gerrymandering and Efficiency Gap (2022)](/us_house.md)
 - Understand and visualize US House of Reps election return data
 - Deep dive into properties of Efficiency Gap (EG) metric
 - Explore EG variations between states and over time
