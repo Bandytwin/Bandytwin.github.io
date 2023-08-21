@@ -3,7 +3,7 @@
 ## ICR - Identify Age Related Conditions
 [Kaggle Competition](https://www.kaggle.com/competitions/icr-identify-age-related-conditions)
 
-**I used Python for this competition, and my final classification [solution](https://www.kaggle.com/code/abandura/mbd-forecasting-w-mars-lms-r) scored in the top 12% in terms of accuarcy from over 6,400 teams.**
+**I used Python for this competition, and my final classification [solution](https://www.kaggle.com/code/abandura/icr-inference-final) scored in the top 12% in terms of accuarcy from over 6,400 teams.**
 
 **Project description:** The goal of this competition is to predict whether a person is healthy (class 0) or has one of three age-related medical conditions (class 1) using a model trained on measurements of various health characteristics.
 
@@ -33,7 +33,7 @@ I also used t-SNE to visualize the dataset in 2D, and to help get an idea of how
 
 ### 3. Methods That Weren't Successful
 
-<img src="images/icr-age/tSNE_2.png?raw=true"/>
+<img src="images/icr-age/cos_sim.png?raw=true"/>
 
 ### 4. Final Modeling Approach and Performance
 
