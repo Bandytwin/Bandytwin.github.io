@@ -19,14 +19,25 @@ The evaluation metric used for this competition is [balanced logarithmic loss (B
 
 ### 2. Exploratory Data Analysis
 
+Because the dataset only contains 617 samples (which is quite small for 56 features), the first step I took after handling missing values was to investigate colinearity between features. Looking at the feature pairwise correlations, plotted below, it turns out the features are fairly uncorrelated other than a few spefic pairs. I removed one feature because it was redundant (perfectly predicted by a combination of other features), but other than that I had difficulty improving accuracy with both feature removal and dimensionality reduction (PCA, LLE, etc.) as well as by removing features with least model importance. I think this difficulty, combined with the lack of colinearity, speaks to the information density described the original features.
+
+<img src="images/icr-age/feature_cor.png?raw=true"/>
+
+I also used t-SNE to visualize the dataset in 2D, and to help get an idea of how seperable to two classes were. What's interesting is there are clearly samples that will be difficult to classify because they are surround by samples of the opposite. 
+
+<img src="images/icr-age/tSNE_2.png?raw=true"/>
 
 ### 4. CV Strategy
 
 
+
 ### 3. Methods That Weren't Successful
 
+<img src="images/icr-age/tSNE_2.png?raw=true"/>
 
 ### 4. Final Modeling Approach and Performance
+
+
 
 <img src="images/icr-age/icr_performance.png?raw=true"/>
 
