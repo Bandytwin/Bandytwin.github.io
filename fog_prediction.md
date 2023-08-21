@@ -3,10 +3,10 @@
 ## Parkinson's Freezing of Gait (FOG) Prediction
 [Kaggle Competition](https://www.kaggle.com/competitions/tlvmc-parkinsons-freezing-gait-prediction)
 
+**I used PyTorch for this competition, and my final prediction model [solution](https://www.kaggle.com/code/abandura/fog-1d-cnn) scored in the top 4% in terms of accuarcy from over 1,300 teams.**
+
 **Project description:** "The goal of this competition is to detect freezing of gait (FOG), a debilitating symptom that afflicts many people with Parkinson’s disease. You will develop a machine learning model trained on data collected from a wearable 3D lower back sensor.
 Your work will help researchers better understand when and why FOG episodes occur. This will improve the ability of medical professionals to optimally evaluate, monitor, and ultimately, prevent FOG events."
-
-I used PyTorch for this competition, and my final prediction model [solution](https://www.kaggle.com/code/abandura/fog-1d-cnn) scored in the top 4% in terms of accuarcy from over 1,300 teams.
 
 ### 1. Data Overview and Evaluation Metric
 
