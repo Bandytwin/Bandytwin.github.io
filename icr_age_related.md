@@ -15,7 +15,7 @@ Your work will help researchers discover the relationship between measurements o
 
 For each observation, we are provided with 56 anaonymized health characteristics (likely including things like age, cellular property measurements, etc.) of the patient as well as a binary label for whether or not they have a health-related illness. Additional data for the training samples only is also provided, which contains the date that the observation was made, three experimental characteristics, and identifiers for which of 3 specific disease the patient has if they are sick. While this supplementary data is not available for the test data set, it is still essential to model training.
 
-The evaluation metric used for this competition is [balanced logarithmic loss (BLL)](https://www.kaggle.com/competitions/icr-identify-age-related-conditions/overview/evaluation). Because the data is fairly unbalanced, containing 5x as many observations for healthy individuals as sick ones, it's important to use a metric that balances performance between the classes. BLL also significantly penalizes false positives (see the plot below). 
+The evaluation metric used for this competition is [balanced logarithmic loss (BLL)](https://www.kaggle.com/competitions/icr-identify-age-related-conditions/overview/evaluation). Because the data is fairly unbalanced, containing 5x as many observations for healthy individuals as sick ones, it's important to use a metric that balances performance between the classes. BLL also exponentially penalizes false confident misclassifications (see the plot below). This behavior is especially beneficial in medical diagnosis applications: Confidently 
 
 <img src="images/smape_formula.png?raw=true"/>
 
