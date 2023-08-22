@@ -14,6 +14,13 @@
 
 <img src="images/mb_sample_fc.png?raw=true"/>
 
+[Identifying Age-Related Conditions (2023)](/icr_age_related)
+- Classification of imbalanced medical data
+- Boosted decision trees
+- Probability Calibration
+
+<img src="images/icr-age/icr_performance.png?raw=true"/>
+
 [Exploring Gerrymandering and Efficiency Gap (2022)](/us_house.md)
 - Understand and visualize US House of Reps election return data
 - Deep dive into properties of Efficiency Gap (EG) metric
