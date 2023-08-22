@@ -27,9 +27,15 @@ I also used t-SNE to visualize the dataset in 2D, and to help get an idea of how
 
 <img src="images/icr-age/tSNE_2.png?raw=true"/>
 
-### 4. Cross Validation Strategy
+### 4. Cross Validation Strategy and Probability Calibration
 
 This problem could be treated as a binary classification problem (sick vs healthy) or a multi-class problem (type of illnes and healthy). The illness with the fewest samples contains only 19 observations. I tested both classification options, and interestingly while trining models to do binary classification had the highest accuracy. However, acheiving that high accuracy relied on Stratified K-Fold splits based on the multiclass labels, so that each illness was evenly distributed between folds.
+
+Because the evaluation is BLL, and the training dataset is highly unbalanced with about 5x more healthy observations, it's important to callibrate the models accordingly. There a few ways to do this, and I tested two methods: 
+1. Train models with class weights
+2. Train unbalanced models, and use the net class predictions to calibrate the output probabilities
+
+Method 2 acheived better results, and is what I ultimately used.
 
 ### 4. Final Modeling Approach and Performance
 
