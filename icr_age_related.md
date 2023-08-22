@@ -23,21 +23,17 @@ Because the dataset only contains 617 samples (which is quite small for 56 featu
 
 <img src="images/icr-age/feature_cor.png?raw=true"/>
 
-I also used t-SNE to visualize the dataset in 2D, and to help get an idea of how seperable to two classes were. What's interesting is there are clearly samples that will be difficult to classify because they are surround by samples of the opposite. 
+I also used t-SNE to visualize the dataset in 2D, and to help get an idea of how seperable to two classes were. There appear to be some samples that will be difficult to classify because they are surround by samples of the opposite class, and this was indeed the case. 
 
 <img src="images/icr-age/tSNE_2.png?raw=true"/>
 
-### 4. CV Strategy
+### 4. Cross Validation Strategy
 
-
-
-### 3. Methods That Weren't Successful
-
-<img src="images/icr-age/cos_sim.png?raw=true"/>
+This problem could be treated as a binary classification problem (sick vs healthy) or a multi-class problem (type of illnes and healthy). The illness with the fewest samples contains only 19 observations. I tested both classification options, and interestingly while trining models to do binary classification had the highest accuracy. However, acheiving that high accuracy relied on Stratified K-Fold splits based on the multiclass labels, so that each illness was evenly distributed between folds.
 
 ### 4. Final Modeling Approach and Performance
 
-
+My best performing model was an ensemble of a tuned LightGBM model and a transformer classification model called [TabPFN](https://github.com/automl/TabPFN). I used Optuna to tune the LGBM hyperparameters, and simply averaging the predictions performed better in CV than training a stacker model. The final CV BLL was 0.17 (the out-of-fold predictions are shown in the plot below) and the score on the private, holdout data was 0.43.
 
 <img src="images/icr-age/icr_performance.png?raw=true"/>
 
