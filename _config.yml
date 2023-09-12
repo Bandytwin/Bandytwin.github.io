@@ -1,9 +1,8 @@
 title: Andrew Cowley # your name (or website title) here
 logo: "/images/logo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Hi, I’m Andrew, a data scientist with over six years of professional experience. I’m an expert in all project development stages, and most recently worked on market testing, financial modeling, and product initiatives. 
-  I approach my work with curiosity, high integrity, and ownership, ensuring I always deliver robust and effective solutions. As someone who is very mission-driven, I’m most passionate about projects focused on helping improve people’s lives. 
-  Currently, I’m most concerned about contributing to solutions to help avert the worst impacts from climate change. While taking the past year to focus on improving my data science skillset, I've also been writing a fantasy novel. 
+  Hi, I’m Andrew, a data scientist with over six years of professional experience. I’m an expert in all project development stages, and most recently worked on market testing, financial modeling, and product initiatives.  
+  Currently, I’m most concerned about contributing to solutions to help avert the worst impacts from climate change.  
   I’m always open to new job or collaboration opportunities, so please don’t hesitate to reach out to me on <a href="https://www.linkedin.com/in/andrewbcowley/">LinkedIn</a> .
   <br><br>
   <a href="https://www.linkedin.com/in/andrewbcowley/">View My LinkedIn Profile</a> 
@@ -13,6 +12,8 @@ plugins:
 - jekyll-remote-theme
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
 
+# While taking the past year to focus on improving my data science skillset, I've also been writing a fantasy novel.
+# I approach my work with curiosity, high integrity, and ownership, ensuring I always deliver robust and effective solutions. As someone who is very mission-driven, I’m most passionate about projects focused on helping improve people’s lives.
   # Outside of work I like to, well, get outside. Trail running, backpacking, skiing, and soccer are just a few of the activities I love doing in and around the mountains of my home in Colorado. When the weather gets less agreeable just give me a story-driven video game or fun fiction book and I'll be happy.
   # My favorite books I've read recently are Golden Son, by Pierce Brown, and The Name of the Wind, by Patrick Rothfuss.
   # <br><br>
